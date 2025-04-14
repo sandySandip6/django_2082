@@ -1,6 +1,6 @@
-{% if latest_qns_list %}
+{% if latest_question_list %}
 <ul>
-    {%for question in latest_qns_list %}
+    {%for question in latest_question_list %}
         <li><a href="/polls/{{question.id}}/">{{question.qns_text}}</a></li>
     {%endfor %}
 </ul>
