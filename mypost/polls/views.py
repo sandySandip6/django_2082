@@ -19,7 +19,7 @@ def detail(request, qns_id):
         question = Question.objects.get(pk = qns_id)
     except Question.DoesNotExist:
         raise Http404("Question Not Found")
-    return render(request, "polls/detail.html", {"question": question})
+    return render(request, "polls/details.html", {"question": question})
 
 def result(request, qns_id):
     response = "you are looking at the result of question %s."
