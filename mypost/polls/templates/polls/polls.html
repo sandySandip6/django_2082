@@ -17,3 +17,6 @@
   </fieldset>
   <input type="submit" value="Vote" />
 </form>
+
+<p><a href="{% url 'polls:index' %}">Back to Polls</a></p>
+{% if user.is_authenticated %}

@@ -9,5 +9,6 @@ urlpatterns = [
     path("<int:qns_id>/results/", views.result, name="result"),
     
     path("<int:qns_id>/vote/", views.vote, name="vote")
+
     
 ]
