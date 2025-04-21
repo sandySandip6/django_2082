@@ -1,11 +1,13 @@
 {% if latest_question_list %}
 <ul>
-    {%for question in latest_question_list %}
-        <li>
-            <a href="/polls/{{qns.id}}/">{{question.qns_text}}</a>
-            <small>Posted on: {{ question.post_date|date:"F j, Y, g:i a" }}</small>
-        </li>
-    {%endfor %}
+  {%for question in latest_question_list %}
+  <li>
+    <a href="{% url 'polls:details' question.id %}"
+      >{{ question.qns_text }}</a
+    >
+    <small>Posted on: {{ question.post_date|date:"F j, Y, g:i a" }}</small>
+  </li>
+  {%endfor %}
 </ul>
 {%else%}
 <p>No polls are available.</p>
