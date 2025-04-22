@@ -9,6 +9,10 @@ class Question(models.Model):
         return self.qns_text
     def was_published_recently(self):
         return self.post_date >= timezone.now() - timezone.timedelta(days=1)
+    @property
+    def total_votes(self):
+        return sum(choice.votes for choice in self.choice_set.all())
+
     
 class Choice(models.Model):
     qns = models.ForeignKey(Question, on_delete = models.CASCADE)

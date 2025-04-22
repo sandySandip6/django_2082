@@ -1,0 +1,81 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #f0f0f0;
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #00bcd4;
+    margin-bottom: 1rem;
+  }
+  
+  .results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .result-row {
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .choice-text {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bar-container {
+    background: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+  }
+  
+  .bar {
+    height: 100%;
+    background: #00bcd4;
+    width: 0%;
+    transition: width 1.5s ease;
+  }
+  
+  .percentage {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #ffeb3b;
+  }
+  
+  .action_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .action_buttons a {
+    text-decoration: none;
+    background: #00bcd4;
+    color: #121212;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .action_buttons a:hover {
+    background: #0196aa;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 600px) {
+    .result-row {
+      font-size: 0.9rem;
+    }
+  }
+  

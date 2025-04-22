@@ -1,14 +1,27 @@
-{% if latest_question_list %}
-<ul>
-  {%for question in latest_question_list %}
-  <li>
-    <a href="{% url 'polls:details' question.id %}"
-      >{{ question.qns_text }}</a
-    >
-    <small>Posted on: {{ question.post_date|date:"F j, Y, g:i a" }}</small>
-  </li>
-  {%endfor %}
-</ul>
-{%else%}
-<p>No polls are available.</p>
-{%endif%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polls Question</title>
+  </head>
+  <body>
+    {% if latest_question_list %}
+    <ul>
+      {%for question in latest_question_list %}
+      <li>
+        <a href="{% url 'polls:details' question.id %}"
+          >{{ question.qns_text }}</a
+        >
+        <small>Posted on: {{ question.post_date|date:"F j, Y, g:i a" }}</small>
+        <h2>Total Votes: {{question.total_votes}}</h2>
+      </li>
+      {%endfor %}
+    </ul>
+    {%else%}
+    <p>No polls are available.</p>
+    {%endif%}
+
+
+  </body>
+</html>

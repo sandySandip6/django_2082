@@ -8,6 +8,7 @@ from django.db.models import F
 
 
 def polls_index(request):
+    question = Question.objects.all()
     latest_question_list = Question.objects.order_by("-post_date")[:5]
     context = {"latest_question_list": latest_question_list}
     return render(request, "polls/index.html",context)
