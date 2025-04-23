@@ -5,6 +5,7 @@ from .models import Question, Choice
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.db.models import F
+from django.contrib import messages
 
 
 def polls_index(request):
@@ -44,6 +45,7 @@ def vote(request, qns_id):
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
+        messages.success(request, "Your vote has been recorded successfully!")
         return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
 
 

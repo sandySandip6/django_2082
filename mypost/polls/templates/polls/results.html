@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="{% static 'polls/results.css' %}" />
 </head>
 <body>
+  {% if messages %}
+  <div class="messages">
+    {% for message in messages %}
+      <div class="message {{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+{% endif %}
   <h1>{{ question.qns_text }}</h1>
   <div class="results-container">
     {% for choice in question.choice_set.all %}
@@ -30,6 +37,8 @@
     <a href="{% url 'polls:details' question.id %}">Vote again?</a>
     <a href="{% url 'polls:polls_index' %}">Back to Polls</a>
   </div>
+
+
   <script src="{% static 'polls/results.js' %}"></script>
 </body>
 </html>

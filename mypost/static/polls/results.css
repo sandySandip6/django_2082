@@ -1,7 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #121212;
-    color: #f0f0f0;
     padding: 1.5rem;
   }
   
@@ -77,5 +76,16 @@ body {
     .result-row {
       font-size: 0.9rem;
     }
+  }
+  
+  .messages {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  .message.success {
+    /* background-color: #d4edda; */
+    color: #155724;
   }
   
