@@ -28,7 +28,9 @@
             {% endfor %}
           </div>
         </fieldset>
+        
         <input type="submit" value="Vote" class="submit-button" />
+        <a href="{% url 'polls:results' question.id  %}" class="submit-button">See Results</a>
       </form>
       
 </body>

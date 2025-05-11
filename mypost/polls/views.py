@@ -7,7 +7,6 @@ from django.urls import reverse
 from django.db.models import F, Count
 from django.contrib import messages
 
-
 def polls_index(request):
     latest_question_list = Question.objects.order_by("-post_date")[:5]
     context = {"latest_question_list": latest_question_list}
